@@ -31,7 +31,7 @@
             border-bottom: 1px solid #eee;
         }
         .logo {
-            width: 150px;
+            width: 100px;
             height: auto;
             background-color: #fff;
             display: flex;
@@ -80,6 +80,64 @@
             color: #2c3e50;
             transform: translateY(-1px);
         }
+         /* Added dropdown submenu styles for Projects navigation */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+            border: 1px solid #eee;
+            padding: 8px 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            margin: 0;
+        }
+        .dropdown-content a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 40%, rgba(135, 206, 235, 0.2) 0%, rgba(255, 182, 193, 0.15) 30%, rgba(221, 160, 221, 0.15) 60%, transparent 100%);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease;
+            border-radius: 4px;
+            z-index: -1;
+        }
+        .dropdown-content a:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .dropdown-content a:hover {
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            transform: translateX(5px);
+        }
+        /* Added dropdown arrow indicator */
+        .dropdown > a::after {
+            content: ' ▾';
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
         main {
             padding: 2rem;
             flex-grow: 1;
@@ -87,6 +145,8 @@
         h1, h2 {
             font-weight: 700;
         }
+    
+        
         /* Updated hero section to have text on left and image on right */
         .hero {
             display: flex;
@@ -188,7 +248,18 @@
         </div>
         <nav>
             <ul>
-                <li><a href="./the-library-project.html">Projects</a></li>
+                 <!-- Added dropdown submenu structure for Projects -->
+                <li class="dropdown">
+                    <a href="./the-library-project.html">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="./the-library-project.html">The Library Project</a>
+                        <a href="./biglifejournal.html">BigLifeJournal</a>
+                        <a href="./lumino.html">Lumino</a>
+                        <a href="./duolingo.html">Duolingo</a>
+                        <a href="./almabase.html">Almabase</a>
+                        <a href="./gyanville.html">Gyanville</a>
+                    </div>
+                </li>
                 <li><a href="https://praana.medium.com/" target="_blank">Blog</a></li>
                 <li><a href="./my-journey.html">My Journey</a></li>
             </ul>
