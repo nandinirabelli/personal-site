@@ -65,6 +65,33 @@
         h1, h2 {
             font-weight: 700;
         }
+        /* Added hero section styles */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: 700;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+        }
         footer {
             background-color: #f4f4f4;
             color: #333;
@@ -80,18 +107,18 @@
     </div>
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                 Updated navigation to include My Journey 
                 <li><a href="./the-library-project.html">Projects</a></li>
                 <li><a href="https://praana.medium.com/" target="_blank">Blog</a></li>
+                <li><a href="./my-journey.html">My Journey</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h1>Hello!</h1>
-            <h1>I’m Nandini Priya Rabelli.</h1><br>
-            This is my personal site showcasing my work and interests.</p>
-            <p>Here, you'll find details about the project's goals, progress, and future plans. Stay tuned for updates!</p>
+         Replaced basic content with hero section 
+        <section class="hero">
+            <h1 class="hero-title">Hello! I'm Nandini Priya Rabelli.</h1>
+            <p class="hero-subtitle">Welcome to my personal space where I share my projects, thoughts, and journey through technology and creativity.</p>
         </section>
     </main>
     <footer>
