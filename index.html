@@ -9,113 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 
   <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
-  <style>
-    
-    body {
-  font-family: 'Caveat', cursive;
-  background-color: white;
-  color: #333;
-  line-height: 1.8;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem; /* Increased body text size */
-}
-
-.nav-link {
-  color: #333 !important;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  font-size: 1.5rem;  /* Larger menu text */
-  font-weight: 600;
-}
-
-.dropdown-item {
-  font-size: 1.25rem; /* Larger dropdown menu text */
-}
-
-.hero-title {
-  font-size: 3.5rem; /* Bigger heading */
-  font-weight: 700;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.hero-subtitle {
-  font-size: 2.5rem; /* Larger subtitle */
-  color: #666;
-  font-style: italic;
-}
-
-    .logo {
-      width: 100px;
-      height: auto;
-    }
-
-    /* Navigation link styles */
-    .nav-link {
-      color: #333 !important;
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    /* Adjust hover effect to use logo colors */
-    .nav-link:hover {
-      color: #12cedf !important; /* Example: skyblue from logo */
-    }
-    .nav-link:hover::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at 30% 40%, 
-        rgba(135,206,235,0.3) 0%,   /* sky blue */
-        rgba(255,182,193,0.3) 30%,  /* light pink */
-        rgba(221,160,221,0.3) 60%,  /* plum */
-        transparent 100%);
-      opacity: 1;
-      transform: scale(1.1);
-      transition: all 0.4s ease;
-      z-index: -1;
-      border-radius: 8px;
-    }
-
-    .hero {
-      padding: 4rem 0;
-    }
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      position: relative;
-    }
-    .hero-subtitle {
-      font-size: 2.25rem;
-      color: #666;
-      font-style: italic;
-    }
-    footer {
-  background: #f4f4f4;
-  padding: 1rem;
-  text-align: center;
-  margin-top: auto;
-  font-size: 1rem; /* Footer text smaller (~16px) */
-}
-  </style>
+ 
 </head>
 <body>
   <!-- Bootstrap Navbar -->
   <nav class="navbar navbar-expand-lg bg-white border-bottom">
     <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <img src="assets/logo.png" class="logo" alt="Logo">
-      </a>
+     <a class="navbar-brand" href="./index.html">
+  <img src="assets/logo.png" alt="Logo" class="logo">
+</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -167,7 +73,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer mt-auto">
     <p>&copy; 2024 Nandini Priya Rabelli. All rights reserved.</p>
   </footer>
 

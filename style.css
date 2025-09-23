@@ -1,0 +1,158 @@
+/* === Global Styles === */
+body {
+  font-family: 'Abel', sans-serif; /* Default: project detail pages */
+  color: #333;
+  background: #fff;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem; /* Increased body text size */
+}
+
+/* Add a body class for homepage to override font */
+body.homepage {
+  font-family: 'Caveat', cursive;
+}
+
+/* === Header Section (project details) === */
+.project-header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(120deg, #e0f7fa, #fce4ec);
+}
+
+.project-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* === Sidebar (project details) === */
+.sidebar {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar h5 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+.sidebar nav a {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sidebar nav a:hover {
+  color: #0056b3;
+}
+
+/* === Content Sections === */
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.content-section h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* === Buttons === */
+.btn-rounded {
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+}
+
+/* === Navbar / Hero (homepage) === */
+.nav-link {
+  color: #333 !important;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.dropdown-item {
+  font-size: 1.25rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: 2.5rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Logo sizing */
+.logo {
+  max-height: 50px; /* adjust this value to taste */
+  height: auto;
+  width: auto;
+}
+/* Force logo size inside navbar */
+.navbar-brand .logo {
+  max-height: 50px;   /* adjust to taste */
+  height: auto;
+  width: auto;
+}
+@media (max-width: 576px) {
+  .navbar-brand .logo {
+    max-height: 40px; /* smaller on mobile */
+  }
+}
+
+
+
+/* Navigation hover effect using logo colors */
+.nav-link:hover {
+  color: #12cedf !important;
+}
+.nav-link:hover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 30% 40%, 
+    rgba(135,206,235,0.3) 0%, 
+    rgba(255,182,193,0.3) 30%, 
+    rgba(221,160,221,0.3) 60%, 
+    transparent 100%);
+  opacity: 1;
+  transform: scale(1.1);
+  transition: a
+
+  /* Footer */
+ 
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Optional: ensure footer sticks to bottom if content is short */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.flex-grow-1 {
+  flex-grow: 1;
+}
+
