@@ -1,6 +1,6 @@
 /* === Global Styles === */
 body {
-  font-family: 'Abel', sans-serif; /* Default: project detail pages */
+  font-family: 'Abel', sans-serif; /* Default: project pages */
   color: #333;
   background: #fff;
   line-height: 1.8;
@@ -9,27 +9,46 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 1.25rem; /* Increased body text size */
+  font-size: 1.25rem; /* body text */
 }
 
-/* Add a body class for homepage to override font */
+/* Homepage font override */
 body.homepage {
   font-family: 'Caveat', cursive;
 }
 
-/* === Header Section (project details) === */
-.project-header {
+/* === Global Heading Styles === */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+/* === Project Page Header === */
+body.project-page .project-header {
   text-align: center;
   padding: 4rem 1rem;
   background: linear-gradient(120deg, #e0f7fa, #fce4ec);
 }
 
-.project-header h1 {
-  font-size: 3rem;
+body.project-page .project-header h1 {
+  font-size: 3rem; /* slightly smaller than homepage */
   font-weight: 600;
 }
 
-/* === Sidebar (project details) === */
+/* === Sidebar === */
 .sidebar {
   background: #fafafa;
   border-radius: 12px;
@@ -60,11 +79,6 @@ body.homepage {
   margin-bottom: 4rem;
 }
 
-.content-section h2 {
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
 /* === Buttons === */
 .btn-rounded {
   border-radius: 50px;
@@ -72,7 +86,7 @@ body.homepage {
 }
 
 /* === Navbar / Hero (homepage) === */
-.nav-link {
+.navbar .nav-link {
   color: #333 !important;
   position: relative;
   border-radius: 8px;
@@ -101,28 +115,28 @@ body.homepage {
 
 /* Logo sizing */
 .logo {
-  max-height: 50px; /* adjust this value to taste */
+  max-height: 50px;
   height: auto;
   width: auto;
 }
-/* Force logo size inside navbar */
+
 .navbar-brand .logo {
-  max-height: 50px;   /* adjust to taste */
+  max-height: 50px;
   height: auto;
   width: auto;
 }
+
 @media (max-width: 576px) {
   .navbar-brand .logo {
-    max-height: 40px; /* smaller on mobile */
+    max-height: 40px;
   }
 }
-
-
 
 /* Navigation hover effect using logo colors */
 .nav-link:hover {
   color: #12cedf !important;
 }
+
 .nav-link:hover::before {
   content: '';
   position: absolute;
@@ -134,10 +148,10 @@ body.homepage {
     transparent 100%);
   opacity: 1;
   transform: scale(1.1);
-  transition: a
+  transition: all 0.3s ease;
+}
 
-  /* Footer */
- 
+/* === Footer === */
 footer {
   background: #f4f4f4;
   text-align: center;
@@ -145,14 +159,31 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Optional: ensure footer sticks to bottom if content is short */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
+/* Ensure footer sticks to bottom if content is short */
 main.flex-grow-1 {
   flex-grow: 1;
 }
 
+/* === Intro / Hero Section (homepage) === */
+.intro-content {
+  background: url('../assets/library1.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+/* Dark overlay for readability */
+.intro-content .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.intro-content .container {
+  position: relative;
+  z-index: 2;
+}

@@ -1,152 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Library Project - My Personal Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Libre Baskerville', Georgia, serif;
-            background-color: white;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
-        .logo {
-            width: 150px;
-            height: auto;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav ul li a:hover {
-            background-color: #f4f4f4;
-        }
-        main {
-            padding: 2rem;
-            flex-grow: 1;
-        }
-        h1, h2 {
-            font-weight: 700;
-        }
-        .year-section {
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-        }
-        .year-nav {
-            margin: 1rem 0;
-        }
-        .year-nav a {
-            margin-right: 1rem;
-            color: #333;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #eee;
-            transition: background-color 0.3s;
-        }
-        .year-nav a:hover {
-            background-color: #ddd;
-        }
-        footer {
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 1rem;
-            margin-top: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Library Project | Personal Projects</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="./css/style.css" rel="stylesheet">
+
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <div> <a href= "./index.html"><img class="logo" src="./images/nandini.png"></a>
-    </div>
-        <nav>
-            <ul>
-                <li><a href="https://nandinirabelli.com/">Home</a></li>
-                <li><a href="the-library-project.html">The Library Project</a></li>
-                <li><a href="https://praana.medium.com/" target="_blank">Blog</a></li>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="careerDropdown" role="button" data-bs-toggle="dropdown">Career Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./biglifejournal.html">BigLifeJournal</a></li>
+              <li><a class="dropdown-item" href="./duolingo.html">Duolingo</a></li>
+              <li><a class="dropdown-item" href="./almabase.html">Almabase</a></li>
+              <li><a class="dropdown-item" href="./gyanville.html">Gyanville</a></li>
+              <li><a class="dropdown-item" href="./tfi.html">Teach For India</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="library-project">
-            <h1>The Library Project</h1>
-            <p>Welcome to The Library Project page. This section contains information about my ongoing library project.</p>
-            <p>Scroll down to view project details and progress for each year.</p>
-            
-            <div class="year-nav">
-                <a href="#2023">2023</a>
-                <a href="#2022">2022</a>
-                <a href="#2021">2021</a>
-            </div>
-            
-            <div id="2023" class="year-section">
-                <h2>2023 Project Details</h2>
-                <p>Here are the details and progress of The Library Project for the year 2023.</p>
-                <ul>
-                    <li>Expanded digital collection by 50%</li>
-                    <li>Implemented new cataloging system</li>
-                    <li>Launched community reading program</li>
-                </ul>
-            </div>
-            
-            <div id="2022" class="year-section">
-                <h2>2022 Project Details</h2>
-                <p>Here are the details and progress of The Library Project for the year 2022.</p>
-                <ul>
-                    <li>Renovated children's reading area</li>
-                    <li>Introduced e-book lending service</li>
-                    <li>Hosted author talk series</li>
-                </ul>
-            </div>
-            
-            <div id="2021" class="year-section">
-                <h2>2021 Project Details</h2>
-                <p>Here are the details and progress of The Library Project for the year 2021.</p>
-                <ul>
-                    <li>Initiated The Library Project</li>
-                    <li>Conducted community needs assessment</li>
-                    <li>Developed 5-year strategic plan</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Personal Site. All rights reserved.</p>
-    </footer>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-bs-toggle="dropdown">Personal Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./the-library-project.html">The Library Project</a></li>
+              <li><a class="dropdown-item" href="./booklist.html">Book List</a></li>
+              <li><a class="dropdown-item" href="./lumino.html">Lumino</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="https://praana.medium.com/" target="_blank">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="./my-journey.html">My Journey</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-project d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container text-center text-lg-start position-relative">
+      <h1 class="hero-title">The Library Project</h1>
+      <p class="hero-subtitle">My Journey of Building Libraries Across India</p>
+    </div>
+  </section>
+
+  <!-- Project Story Section -->
+  <section class="content-section py-5">
+    <div class="container">
+
+      <h3>Where It All Began</h3>
+      <p>My journey with this project started at home. As parents, we tried many ways to spark our daughter Leela’s curiosity, but it wasn’t until a visit to a beautiful library that everything changed. That visit transformed her relationship with books—she fell in love with stories, and I saw firsthand how powerful access to a library could be for a child. I knew then that I wanted other children, especially in rural communities, to have that same chance.</p>
+
+      <h3>A Birthday With a Difference</h3>
+      <p>When Leela turned four, we decided to celebrate her birthday differently. Instead of gifts and parties, we set out to raise funds for children’s books. What began with ten Gram Panchayat libraries in Udupi, Karnataka, soon grew beyond my expectations as the community rallied behind the cause. The success of that first campaign gave me the confidence to continue.</p>
+
+      <h3>Growing the Mission</h3>
+      <p>The following year, for Leela’s fifth birthday, we expanded our efforts to Telangana. With the support of friends, family, and well-wishers, we brought books to orphaned and underprivileged children in Warangal, through the Sai Spandan Trust and local schools. By the time she turned six, our campaign had grown even further — 1,400 storybooks reached three schools supported by the Rural Development Foundation in rural Telangana, directly benefiting over 1,500 students. Each step was fueled by the belief that storybooks open doors to imagination, curiosity, and new possibilities.</p>
+
+      <h3>Weathering the Challenges</h3>
+      <p>Along the way, challenges did arise — the COVID-19 pandemic made fundraising more difficult, as donations to educational causes declined. But I didn’t want to give up. Through blogs, social media, and a dedicated YouTube channel, I shared stories of impact and reached out to people who believed in the same vision. Their encouragement and support carried us forward, one campaign at a time.</p>
+
+      <h3>The Joy of Impact</h3>
+      <p>Looking back, I am grateful that a small idea to mark Leela’s birthday has blossomed into something much larger. Over three years, we’ve been able to place thousands of books into the hands of children who might otherwise never have had the chance to read them. Seeing their excitement, their curiosity, and their growing love for reading has been the most meaningful outcome of all.</p>
+
+      <h3>Turning Pages Toward the Future</h3>
+      <p>But this is only the beginning. My dream is to create vibrant community libraries in Telangana and beyond—spaces that bring together not just children, but whole families, around the joy of reading. With every book shared, I hope we are also writing new possibilities into the future of these communities.</p>
+    </div>
+  </section>
+  <!-- Project Image Gallery -->
+<section class="project-gallery py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Project Gallery</h2>
+
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card border-0">
+          <img src="assets/libray1.png" class="card-img-top img-fluid rounded" alt="Gallery Image 1">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card border-0">
+          <img src="assets/library2.jpeg" class="card-img-top img-fluid rounded" alt="Gallery Image 2">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card border-0">
+          <img src="assets/library3.jpeg" class="card-img-top img-fluid rounded" alt="Gallery Image 3">
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card border-0">
+          <img src="assets/library4.jpeg" class="card-img-top img-fluid rounded" alt="Gallery Image 4">
+        </div>
+      </div>
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+</section>
+
+
+  <!-- Yearly Campaigns Tabs -->
+  <section class="project-details py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Yearly Campaigns</h2>
+
+      <ul class="nav nav-tabs justify-content-center mb-4" id="yearTabs" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active" id="tab-2021" data-bs-toggle="tab" data-bs-target="#content-2021" type="button">2021</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="tab-2022" data-bs-toggle="tab" data-bs-target="#content-2022" type="button">2022</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="tab-2023" data-bs-toggle="tab" data-bs-target="#content-2023" type="button">2023</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="yearTabsContent">
+        <div class="tab-pane fade show active" id="content-2021">
+          <h3>On the 4th Birthday of Leela</h3>
+          <p><strong>Raising funds for 10 Gram Panchayat Libraries in Udupi District, Karnataka</strong></p>
+          <p><b>Books Goal:</b> 960 | <b>Books Received:</b> 1010 | <i>Successful</i></p>
+          <p>One visit to a very beautiful, big library transformed Leela's relationship with books.</p>
+        </div>
+        <div class="tab-pane fade" id="content-2022">
+          <h3>Celebrate Leela’s 5th Birthday</h3>
+          <p><strong>Helping her share the joy of reading with orphan children in Telangana</strong></p>
+          <p><b>Books Goal:</b> 1080 | <b>Books Received:</b> 1331 | <i>Successful</i></p>
+          <p>With your help, we gifted storybooks to children in Swamy Vivekananda Orphanage Home and Sai Spandana Digi School. <a href="http://www.saisevatrust.in/" target="_blank">Visit Sai Seva Trust</a></p>
+        </div>
+        <div class="tab-pane fade" id="content-2023">
+          <h3>Celebrating Leela’s 6th Birthday</h3>
+          <p><strong>Raising funds for children’s storybooks in Telangana</strong></p>
+          <p><b>Books Goal:</b> 1000 | <b>Books Received:</b> 1392 | <i>Successful</i></p>
+          <p>Funds provided books for The Rural Development Foundation (RDF). <a href="https://www.facebook.com/RuralDevelopmentFoundation" target="_blank">RDF Facebook</a> | <a href="https://rdfblog.wordpress.com/" target="_blank">RDF Blog</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light border-top py-4 mt-auto">
+    <div class="container text-center">
+      <p class="mb-2">&copy; 2025 Nandini Priya Rabelli. All rights reserved.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://twitter.com/" target="_blank" class="text-dark"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="https://linkedin.com/" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/" target="_blank" class="text-dark"><i class="fab fa-github fa-lg"></i></a>
+        <a href="https://instagram.com/" target="_blank" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Styles for Project Page Hero -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero-project {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 60vh;
+      background: url('assets/library1.png') center center/cover no-repeat;
+      color: #fff;
+    }
+    .hero-project .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    .hero-project .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-project .hero-title {
+      font-family: 'Caveat', cursive;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .hero-project .hero-subtitle {
+      font-family: 'Caveat', cursive;
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: #f0f0f0;
+    }
+
+.project-gallery h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-gallery img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+  </style>
+
 </body>
 </html>
