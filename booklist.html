@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Site</title>
+  <title>Book List | Personal Projects</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
 
   <!-- Custom CSS -->
   <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 
@@ -39,8 +40,7 @@
               <li><a class="dropdown-item" href="./duolingo.html">Duolingo</a></li>
               <li><a class="dropdown-item" href="./almabase.html">Almabase</a></li>
               <li><a class="dropdown-item" href="./gyanville.html">Gyanville</a></li>
-              <!--
-              <li><a class="dropdown-item" href="./tfi.html">Teach For India</a></li> -->
+              <li><a class="dropdown-item" href="./tfi.html">Teach For India</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -58,23 +58,43 @@
     </div>
   </nav>
 
-  <!-- Hero Section (Full-screen background) -->
-  <section class="hero d-flex align-items-center">
+  <!-- Hero Section -->
+  <section class="hero-project d-flex align-items-center">
     <div class="overlay"></div>
     <div class="container text-center text-lg-start position-relative">
-      <h1 class="hero-title">Hello!<br>I'm Nandini Priya Rabelli.</h1>
-      <p class="hero-subtitle">Welcome to my personal space where I share my projects, thoughts, and journey through empathy, technology and creativity.</p>
+      <h1 class="hero-title">Book List</h1>
+      <p class="hero-subtitle">Empowering Parents to Guide Their Child’s Reading Journey</p>
     </div>
   </section>
+ <!-- Project Story Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
 
-  <!-- Main Content -->
-  <main class="flex-grow-1 py-5" style="padding-bottom: 0rem !important; padding-top: 0rem !important;">
-    <div class="container">
-      <!-- Homepage content goes here -->
+        <h3 class="mb-3">Where It All Began</h3>
+        <p>My journey with this project started at home. As parents, we tried many ways to spark our daughter Leela’s curiosity, but it wasn’t until a visit to a beautiful library that everything changed. That visit transformed her relationship with books—she fell in love with stories, and I saw firsthand how powerful access to a library could be for a child. I knew then that I wanted other children, especially in rural communities, to have that same chance.</p>
+
+        <h3 class="mt-5 mb-3">A Birthday With a Difference</h3>
+        <p>When Leela turned four, we decided to celebrate her birthday differently. Instead of gifts and parties, we set out to raise funds for children’s books. What began with ten Gram Panchayat libraries in Udupi, Karnataka, soon grew beyond my expectations as the community rallied behind the cause. The success of that first campaign gave me the confidence to continue.</p>
+
+        <h3 class="mt-5 mb-3">Growing the Mission</h3>
+        <p>The following year, for Leela’s fifth birthday, we expanded our efforts to Telangana. With the support of friends, family, and well-wishers, we brought books to orphaned and underprivileged children in Warangal, through the Sai Spandan Trust and local schools. By the time she turned six, our campaign had grown even further — 1,400 storybooks reached three schools supported by the Rural Development Foundation in rural Telangana, directly benefiting over 1,500 students. Each step was fueled by the belief that storybooks open doors to imagination, curiosity, and new possibilities.</p>
+
+        <h3 class="mt-5 mb-3">Weathering the Challenges</h3>
+        <p>Along the way, challenges did arise — the COVID-19 pandemic made fundraising more difficult, as donations to educational causes declined. But I didn’t want to give up. Through blogs, social media, and a dedicated YouTube channel, I shared stories of impact and reached out to people who believed in the same vision. Their encouragement and support carried us forward, one campaign at a time.</p>
+
+        <h3 class="mt-5 mb-3">The Joy of Impact</h3>
+        <p>Looking back, I am grateful that a small idea to mark Leela’s birthday has blossomed into something much larger. Over three years, we’ve been able to place thousands of books into the hands of children who might otherwise never have had the chance to read them. Seeing their excitement, their curiosity, and their growing love for reading has been the most meaningful outcome of all.</p>
+
+        <h3 class="mt-5 mb-3">Turning Pages Toward the Future</h3>
+        <p>But this is only the beginning. My dream is to create vibrant community libraries in Telangana and beyond—spaces that bring together not just children, but whole families, around the joy of reading. With every book shared, I hope we are also writing new possibilities into the future of these communities.</p>
+
+      </div>
     </div>
-  </main>
-
-  <!-- Footer -->
+  </div>
+</section>
+<!-- Footer -->
   <footer class="footer bg-light border-top py-4 mt-auto">
     <div class="container text-center">
       <p class="mb-2">&copy; 2025 Nandini Priya Rabelli. All rights reserved.</p>
@@ -87,80 +107,45 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+<!-- Bootstrap JS -->
   <script src="./js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom Styles -->
+  <!-- Custom Styles for Project Page Hero -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
-    .navbar, .navbar-nav .nav-link, .navbar-brand {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-    }
-
-    /* Full-screen Hero */
-    .hero {
+    .hero-project {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh; /* Full viewport height */
-      background: url('assets/hero.png') center center/cover no-repeat;
+      min-height: 60vh;
+      background: url('assets/library1.png') center center/cover no-repeat;
       color: #fff;
-      text-align: left;
     }
-    .hero .overlay {
+    .hero-project .overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0,0,0,0.5);
       z-index: 1;
     }
-    .hero .container {
+    .hero-project .container {
       position: relative;
       z-index: 2;
     }
-    .hero-title {
+    .hero-project .hero-title {
       font-family: 'Caveat', cursive;
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
-    .hero-subtitle {
+    .hero-project .hero-subtitle {
       font-family: 'Caveat', cursive;
       font-size: 1.75rem;
       font-weight: 400;
       color: #f0f0f0;
     }
-
-    @media (max-width: 992px) {
-      .hero-title { font-size: 2.5rem; }
-      .hero-subtitle { font-size: 1.5rem; }
-    }
-    @media (max-width: 576px) {
-      .hero-title { font-size: 2rem; }
-      .hero-subtitle { font-size: 1.25rem; }
-    }
-    /* Navbar font */
-.navbar, .navbar-brand {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600; /* Keep brand slightly bold */
-}
-
-.navbar-nav .nav-link {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400; /* Normal weight for menu items */
-}
-
-/* Dropdown items */
-.dropdown-menu .dropdown-item {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400; /* Normal weight for dropdowns */
-}
-  </style>
+</style>
 </body>
 </html>
