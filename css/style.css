@@ -1,21 +1,43 @@
 /* ===== Nandini Priya Rabelli - site styles (warm & personal) ===== */
 
+/* Design tokens, drawn from the logo (yellow, coral red, green, sky blue on black outline).
+   See DESIGN.md. Bright colors are for shapes and accents; the -strong shades are for text and buttons. */
 :root {
-  --cream: #fbf6ef;
-  --paper: #fffdf9;
-  --ink: #3b2f2a;
-  --ink-soft: #6e5f58;
-  --terracotta: #c8674a;
-  --terracotta-dark: #a94f35;
-  --sage: #8fa58a;
-  --blush: #f4dcd3;
-  --honey: #f3d9a4;
-  --line: #ead9cc;
+  /* Logo palette */
+  --sun: #F8D830;        /* yellow */
+  --coral: #F25656;      /* red */
+  --leaf: #5ACF73;       /* green */
+  --sky: #2ACFEE;        /* blue */
+
+  /* Accessible shades for text, buttons and links */
+  --coral-strong: #C43D3D;
+  --leaf-strong: #2F8F4E;
+  --sky-strong: #137C99;
+
+  /* Tints for backgrounds and tags */
+  --sun-tint: #FDF3C2;
+  --coral-tint: #FBDADA;
+  --leaf-tint: #D8F3E0;
+  --sky-tint: #D2F4FB;
+
+  /* Neutrals */
+  --ink: #1E1E1E;        /* logo outline black */
+  --ink-soft: #5A5A5A;
+  --cream: #FAF8F3;
+  --paper: #FFFFFF;
+  --line: #E6E1D8;
+
+  /* Semantic aliases used by components */
+  --accent: var(--coral-strong);
+  --accent-hover: #A42F2F;
+  --highlight: var(--sun);
+  --success: var(--leaf-strong);
+
   --font-serif: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
   --font-hand: 'Caveat', cursive;
   --radius: 18px;
-  --shadow: 0 10px 30px rgba(59, 47, 42, 0.08);
+  --shadow: 0 10px 30px rgba(30, 30, 30, 0.08);
   --max: 1080px;
 }
 
@@ -35,8 +57,8 @@ body {
 }
 main { flex: 1; }
 img { max-width: 100%; display: block; }
-a { color: var(--terracotta-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-a:hover { color: var(--terracotta); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
 
 h1, h2, h3 {
   font-family: var(--font-serif);
@@ -53,7 +75,7 @@ p { margin: 0 0 1em; }
 .wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
 .section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .section--tint { background: var(--paper); }
-.eyebrow { font-family: var(--font-hand); font-size: 1.5rem; color: var(--terracotta); display: block; margin-bottom: 0.1rem; }
+.eyebrow { font-family: var(--font-hand); font-size: 1.5rem; color: var(--accent); display: block; margin-bottom: 0.1rem; }
 .lead { font-size: 1.2rem; color: var(--ink-soft); max-width: 62ch; }
 
 /* ----- Header & menu (same structure as the original site) ----- */
@@ -91,7 +113,7 @@ p { margin: 0 0 1em; }
 .nav > a:hover,
 .nav summary:hover,
 .nav > a[aria-current="page"],
-.nav details[open] > summary { border-bottom-color: var(--terracotta); color: var(--terracotta-dark); }
+.nav details[open] > summary { border-bottom-color: var(--accent); color: var(--accent); }
 .nav summary::-webkit-details-marker { display: none; }
 .nav summary::after { content: " \25BE"; font-size: 0.8em; }
 
@@ -117,7 +139,7 @@ p { margin: 0 0 1em; }
   text-decoration: none;
   font-weight: 500;
 }
-.dropdown__menu a:hover { background: var(--blush); color: var(--terracotta-dark); }
+.dropdown__menu a:hover { background: var(--coral-tint); color: var(--accent); }
 
 /* ----- Hero (full-screen, from the original design) ----- */
 .hero {
@@ -132,7 +154,7 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(59, 47, 42, 0.72), rgba(59, 47, 42, 0.35));
+  background: linear-gradient(120deg, rgba(30, 30, 30, 0.72), rgba(30, 30, 30, 0.35));
 }
 .hero .wrap { position: relative; z-index: 1; }
 .hero-title {
@@ -173,8 +195,8 @@ p { margin: 0 0 1em; }
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--terracotta-dark);
-  background: var(--blush);
+  color: var(--accent);
+  background: var(--coral-tint);
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
   margin-bottom: 0.7rem;
@@ -189,11 +211,11 @@ p { margin: 0 0 1em; }
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
-  border: 2px solid var(--terracotta);
+  border: 2px solid var(--coral-strong);
   color: #fff;
-  background: var(--terracotta);
+  background: var(--coral-strong);
 }
-.btn:hover { background: var(--terracotta-dark); border-color: var(--terracotta-dark); color: #fff; }
+.btn:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
 
 /* ----- Case-study pages ----- */
 .page-head { padding: clamp(2.5rem, 6vw, 4rem) 0 1.5rem; }
@@ -203,8 +225,8 @@ p { margin: 0 0 1em; }
   font-family: var(--font-hand);
   font-size: 1.8rem;
   line-height: 1.3;
-  color: var(--terracotta-dark);
-  border-left: 4px solid var(--sage);
+  color: var(--accent);
+  border-left: 4px solid var(--leaf);
   padding: 0.2rem 0 0.2rem 1.1rem;
   margin: 1.8rem 0;
 }
@@ -235,10 +257,10 @@ p { margin: 0 0 1em; }
   box-shadow: var(--shadow);
 }
 .campaign img { border-radius: 12px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; margin-bottom: 0.8rem; }
-.campaign .year { font-family: var(--font-hand); font-size: 1.6rem; color: var(--terracotta); }
+.campaign .year { font-family: var(--font-hand); font-size: 1.6rem; color: var(--accent); }
 .campaign p { margin: 0.2rem 0; color: var(--ink-soft); font-size: 0.97rem; }
 
-.timeline { list-style: none; padding: 0; margin: 0; border-left: 2px dashed var(--honey); }
+.timeline { list-style: none; padding: 0; margin: 0; border-left: 2px dashed var(--sun); }
 .timeline li { position: relative; padding: 0 0 1.6rem 1.6rem; }
 .timeline li::before {
   content: "";
@@ -248,7 +270,7 @@ p { margin: 0 0 1em; }
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--terracotta);
+  background: var(--coral-strong);
   border: 3px solid var(--cream);
 }
 .timeline .when { font-size: 0.9rem; color: var(--ink-soft); font-weight: 600; }
@@ -256,7 +278,7 @@ p { margin: 0 0 1em; }
 .timeline ul { margin: 0.3rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
 
 .note {
-  background: var(--blush);
+  background: var(--coral-tint);
   border-radius: var(--radius);
   padding: 1.5rem 1.7rem;
 }
@@ -272,7 +294,7 @@ p { margin: 0 0 1em; }
 .site-footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .social { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 .social a { color: var(--ink); font-weight: 600; text-decoration: none; }
-.social a:hover { color: var(--terracotta); }
+.social a:hover { color: var(--accent); }
 
 /* ----- Responsive ----- */
 @media (max-width: 800px) {
