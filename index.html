@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nandini Priya Rabelli | Learning, Literacy & Storytelling</title>
-  <meta name="description" content="Nandini Priya Rabelli: 8+ years in EdTech, early literacy and educational media. Projects, writing and the story behind The Library Project.">
+  <title>Nandini Priya Rabelli | Personal Site</title>
+  <meta name="description" content="Nandini Priya Rabelli: projects in EdTech, early literacy and educational media.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -15,96 +15,119 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html">Nandini Rabelli</a>
+      <a class="brand" href="index.html" aria-label="Home"><img src="assets/logo.png" alt="Logo" class="logo"></a>
       <nav class="nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About</a>
-        <a href="work.html">Work</a>
-        <a href="library-project.html">Library Project</a>
-        <a href="writing.html">Writing</a>
+        <details class="dropdown">
+          <summary>Career Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="biglifejournal.html">BigLifeJournal</a></li>
+            <li><a href="duolingo.html">Duolingo</a></li>
+            <li><a href="almabase.html">Almabase</a></li>
+          </ul>
+        </details>
+        <details class="dropdown">
+          <summary>Personal Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="the-library-project.html">The Library Project</a></li>
+            <li><a href="booklist.html">Book List</a></li>
+            <li><a href="lumino.html">Lumino</a></li>
+          </ul>
+        </details>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Blog</a>
+        <a href="my-journey.html">My Journey</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Hero (full-screen, original background) -->
     <section class="hero">
-      <div class="wrap hero__grid">
-        <div>
-          <span class="eyebrow">Hello, I'm</span>
-          <h1 class="hero__name">Nandini Priya Rabelli</h1>
-          <p class="hero__sub">I make learning joyful for children.</p>
-          <p class="lead">
-            I bring 8+ years of experience across EdTech, early literacy and educational media.
-            I work on multilingual learning content, QA workflows, phonological accuracy and audio and video review,
-            and I'm always looking for the next way to make reading feel like play.
-          </p>
-          <div class="hero__actions">
-            <a class="btn" href="work.html">See my work</a>
-            <a class="btn btn--ghost" href="about.html">My story</a>
-          </div>
-        </div>
-        <img class="hero__photo" src="assets/nandini.png" alt="Portrait of Nandini Priya Rabelli">
+      <div class="wrap">
+        <h1 class="hero-title">Hello!<br>I'm Nandini Priya Rabelli.</h1>
+        <p class="hero-subtitle">Welcome to my personal space where I share my projects, thoughts, and journey through empathy, technology and creativity.</p>
       </div>
     </section>
 
+    <!-- Intro -->
+    <section class="section">
+      <div class="wrap intro">
+        <div>
+          <span class="eyebrow">A little about me</span>
+          <h2>Joyful learning for children</h2>
+          <p class="lead">I bring 8+ years of experience across EdTech, early literacy and educational media. I work on multilingual learning content, QA workflows, phonological accuracy and audio and video review.</p>
+          <p>Across my career I have worked on a children's learning platform, a language-learning product, a YouTube channel for Telugu learners, and community reading projects. Below you'll find the work behind each.</p>
+        </div>
+        <img src="nandini.png" alt="Portrait of Nandini Priya Rabelli">
+      </div>
+    </section>
+
+    <!-- Career Projects (same items as the menu) -->
     <section class="section section--tint">
       <div class="wrap">
-        <span class="eyebrow">Right now</span>
-        <h2>What I'm working on</h2>
-        <div class="grid">
+        <span class="eyebrow">Career projects</span>
+        <h2>Work I've done</h2>
+        <div class="grid" style="margin-top: 1.5rem;">
           <article class="card">
-            <span class="card__tag">Current role</span>
-            <h3>GrowthMinded</h3>
-            <p>Masterclass Lead and Product Strategy at Big Life Journal, an SEL and growth mindset platform for parents, teachers and therapists.</p>
-            <a class="more" href="work.html">Read more →</a>
+            <span class="card__tag">Product and content</span>
+            <h3>BigLifeJournal</h3>
+            <p>Masterclass lead and product strategy for GrowthMinded, an SEL and growth mindset platform for parents and educators.</p>
+            <a class="more" href="biglifejournal.html">Read more →</a>
           </article>
           <article class="card">
-            <span class="card__tag">Community project</span>
-            <h3>The Library Project</h3>
-            <p>Yearly birthday fundraisers that have put thousands of storybooks into the hands of children in Karnataka and Telangana.</p>
-            <a class="more" href="library-project.html">Read the story →</a>
+            <span class="card__tag">Language learning</span>
+            <h3>Duolingo</h3>
+            <p>Telugu to English translator and QA for 30+ learning units, checking pronunciation and natural speech.</p>
+            <a class="more" href="duolingo.html">Read more →</a>
           </article>
           <article class="card">
-            <span class="card__tag">Product</span>
-            <h3>Book List</h3>
-            <p>An app that helps parents find curated book lists for their child's reading level and track progress without the friction.</p>
-            <a class="more" href="work.html">Explore the app →</a>
+            <span class="card__tag">Operations and data</span>
+            <h3>Almabase</h3>
+            <p>Operations manager and data analyst for a SaaS team: dashboards, process pipelines and SOPs.</p>
+            <a class="more" href="almabase.html">Read more →</a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Personal Projects (same items as the menu) -->
     <section class="section">
       <div class="wrap">
-        <span class="eyebrow">By the numbers</span>
-        <h2>A little about the work so far</h2>
-        <div class="stats">
-          <div class="stat"><strong>8+</strong><span>years across EdTech and early literacy</span></div>
-          <div class="stat"><strong>26+</strong><span>learning videos produced for young children</span></div>
-          <div class="stat"><strong>30+</strong><span>Duolingo learning units translated and QA-tested</span></div>
-          <div class="stat"><strong>10+</strong><span>parenting masterclasses managed end to end</span></div>
+        <span class="eyebrow">Personal projects</span>
+        <h2>Things I've built for kids and families</h2>
+        <div class="grid" style="margin-top: 1.5rem;">
+          <article class="card">
+            <img class="card__img" src="assets/library1.png" alt="A library reading space">
+            <span class="card__tag">Community</span>
+            <h3>The Library Project</h3>
+            <p>Yearly birthday fundraisers that placed storybooks in libraries and schools across Karnataka and Telangana.</p>
+            <a class="more" href="the-library-project.html">Read the story →</a>
+          </article>
+          <article class="card">
+            <img class="card__img" src="assets/bg_booklist.png" alt="Book List app">
+            <span class="card__tag">Product</span>
+            <h3>Book List</h3>
+            <p>An app that helps parents find curated book lists for their child's reading level and track progress.</p>
+            <a class="more" href="booklist.html">Read the case study →</a>
+          </article>
+          <article class="card">
+            <span class="card__tag">Learning media</span>
+            <h3>Lumino</h3>
+            <p>A YouTube channel making Telugu language learning engaging for young children, with 26+ videos.</p>
+            <a class="more" href="lumino.html">Read more →</a>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--tint">
-      <div class="wrap">
-        <span class="eyebrow">From the blog</span>
-        <h2>Thoughts on learning, children and craft</h2>
-        <p class="lead">I write about play-based learning, early literacy and the making of things for kids. Recent pieces live on Medium.</p>
-        <a class="btn" href="writing.html">Read the writing</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>&copy; 2026 Nandini Priya Rabelli</span>
+      <span>&copy; 2025 Nandini Priya Rabelli. All rights reserved.</span>
       <nav class="social" aria-label="Social">
         <a href="mailto:nandinipriya.r@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nandinipriyarabelli/">LinkedIn</a>
-        <a href="https://www.youtube.com/@luminofun">YouTube</a>
-        <a href="https://praana.medium.com/">Medium</a>
+        <a href="https://www.linkedin.com/in/nandinipriyarabelli/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@luminofun" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Medium</a>
       </nav>
     </div>
   </footer>
