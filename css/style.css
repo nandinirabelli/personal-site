@@ -147,7 +147,7 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   min-height: calc(100vh - 70px);
-  background: url('assets/hero.png') center center / cover no-repeat;
+  background: url('../assets/hero.png') center center / cover no-repeat;
   color: #fff;
 }
 .hero::before {
