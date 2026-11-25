@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duolingo | Career Projects</title>
-  <meta name="description" content="Telugu to English translation and QA for Duolingo's learning units.">
+  <meta name="description" content="Translation and speech QA for Duolingo's Telugu to English course.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -43,24 +43,51 @@
     <section class="page-head">
       <div class="wrap">
         <span class="eyebrow">Career project</span>
-        <h1>Duolingo</h1>
-        <p class="lead">Language translator, Telugu to English, Jan to Aug 2023.</p>
+        <h1>Duolingo Telugu&ndash;English course</h1>
+        <p class="lead">Shipping course content where a mispronounced vowel is the difference between a learner trusting the product and leaving it.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Language Translator &amp; QA (Telugu&ndash;English)</dd></div>
+          <div><dt>Timeline</dt><dd>Jan &ndash; Aug 2023</dd></div>
+          <div><dt>Scope</dt><dd>Individual contributor, course content</dd></div>
+          <div><dt>Focus</dt><dd>Localization quality, speech QA</dd></div>
+        </dl>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap story">
-        <h2>Telugu to English course</h2>
-        <p>I translated and QA-tested learning units for Duolingo's Telugu-to-English course, the kind of work where every word has to be right for a learner to trust it.</p>
+        <h2>Context</h2>
+        <p>Duolingo's Telugu-to-English course teaches English to Telugu speakers. Much of the audio is generated through speech synthesis, which means quality problems are systematic: a single wrong pronunciation rule does not appear once, it appears in every unit that uses it.</p>
+
+        <h2>Problem</h2>
+        <p>A literal translation can be correct and still be wrong for a learner. Telugu and English differ in word order, formality and sound inventory, so content that passes a dictionary check can still read as stilted, or sound wrong when synthesised. Learners do not file bug reports about this; they quietly lose trust in the course.</p>
+
+        <div class="tradeoff">
+          <p><strong>Trade-off:</strong> the most natural Telugu phrasing is not always the clearest teaching example. For early units I favoured clarity over idiom, so a beginner could map the two languages onto each other, and allowed more natural phrasing as units progressed.</p>
+        </div>
+
+        <h2>Execution</h2>
         <ul>
           <li>Translated and QA-tested 30+ learning units.</li>
-          <li>Checked phonological accuracy, correct pronunciation and natural prosody in speech synthesis content.</li>
-          <li>Documented feedback for linguistic and technical QA improvements.</li>
+          <li>Reviewed speech synthesis output for phonological accuracy, correct pronunciation and natural prosody, not just correct words.</li>
+          <li>Documented recurring failure patterns and fed them back as linguistic and technical QA improvements, so fixes applied to the system rather than to one unit at a time.</li>
         </ul>
-        <p class="pull">Pronunciation and phrasing are where a learner decides whether a language feels real.</p>
+
+        <h2>Impact</h2>
+        <div class="metrics">
+          <div class="metric"><strong>30+</strong><span>learning units translated and QA-tested</span></div>
+        </div>
+        <div class="todo">
+          <p>If you have it: the defect or rework rate on units you reviewed, how many QA issues you escalated that became course-wide fixes, or anything the team tracked on content quality. Even "X recurring pronunciation issues documented" is concrete.</p>
+        </div>
+
+        <h2>What I took from it</h2>
+        <p>Writing up the pattern behind a bug is worth more than fixing the instance. The feedback that changed how the course handled a sound class outlived every individual correction I made.</p>
+
         <p><a href="https://www.duolingo.com/course/en/te/Learn-English" target="_blank" rel="noopener">View the course on Duolingo</a></p>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">

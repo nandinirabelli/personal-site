@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book List | Personal Projects</title>
-  <meta name="description" content="Book List: an app that helps parents find curated book lists and track their child's reading.">
+  <meta name="description" content="Book List: helping parents find curated books and track their child's reading.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -44,42 +44,61 @@
       <div class="wrap">
         <span class="eyebrow">Personal project</span>
         <h1>Book List</h1>
-        <p class="lead">Empowering parents to guide their child's reading journey.</p>
+        <p class="lead">Helping parents find the right books for their child's reading level, and stay with it.</p>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Product (concept to MVP definition)</dd></div>
+          <div><dt>Timeline</dt><dd>Personal project</dd></div>
+          <div><dt>Scope</dt><dd>Research, strategy, product definition</dd></div>
+          <div><dt>Focus</dt><dd>Early literacy, parent tools</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="wrap">
         <img class="hero-img" src="assets/bg_booklist.png" alt="Book List app">
       </div>
     </section>
 
     <section class="section">
       <div class="wrap story">
-        <h2>Project overview</h2>
-        <p>Book List is an app designed to help parents easily discover curated book lists suited to their child's reading level and track progress with joy and confidence. It blends educational utility with emotional motivation, supporting parents as they build strong reading habits, one book at a time.</p>
+        <h2>Context</h2>
+        <p>Book List helps parents discover curated book lists suited to their child's reading level and track progress. It targets the gap between wanting to raise a reader and knowing what to actually hand the child next.</p>
 
-        <h2>The challenge</h2>
-        <p>Parents want to nurture their child's reading journey but often face:</p>
+        <h2>Problem</h2>
+        <p>Parents who care about their child's reading run into three things at once:</p>
         <ul>
-          <li>Overwhelm from too many book choices</li>
-          <li>Lack of clear visibility into progress</li>
-          <li>Difficulty keeping reading fun, not forced</li>
+          <li>Too many book choices, with no way to judge which fit their child.</li>
+          <li>No clear view of whether progress is happening.</li>
+          <li>Reading turning into a chore for both sides once it becomes a tracked obligation.</li>
         </ul>
-        <p><strong>Our goal:</strong> build a simple, rewarding experience for parents to find the right books and track reading progress without friction.</p>
+        <p>The third one is the trap: most tracking tools solve visibility by adding pressure, and pressure is what makes a child stop reading.</p>
 
-        <h2>Discovery and insight</h2>
-        <p>Using the Jobs to Be Done (JTBD) framework, we uncovered the parent's core motivation: when helping a child build strong reading habits, parents want to discover curated books suited to their child's level and interests, so they can track progress and make sure the reading material is right.</p>
-        <p>This became the foundation of our product strategy:</p>
+        <h2>Users and research</h2>
+        <p>I used the Jobs to Be Done framework to get underneath the feature requests. The core job: when I'm helping my child build strong reading habits, I want to discover curated books suited to their level and interests, so I can track progress and know they're reading the right material.</p>
         <ul>
-          <li><strong>Functional job:</strong> find and organize books effectively.</li>
-          <li><strong>Emotional job:</strong> feel confident and proud in guiding literacy growth.</li>
+          <li><strong>Functional job:</strong> find and organise books effectively.</li>
+          <li><strong>Emotional job:</strong> feel confident and proud guiding literacy growth.</li>
           <li><strong>Social job:</strong> be seen as an engaged, supportive parent.</li>
         </ul>
+        <p>A finding that shaped the product: parents preferred pre-curated lists over algorithmic recommendations. They wanted a trustworthy human judgment, not a better ranking model.</p>
 
-        <h2>Product strategy and experience pillars</h2>
-        <p>We anchored the design around four core pillars:</p>
+        <h2>Strategy</h2>
+        <p>Four pillars, each tied back to a job:</p>
         <ol>
-          <li><strong>Guided onboarding for parents:</strong> curated discovery, progress tracking, rating and milestones.</li>
-          <li><strong>Curated discovery by grade, mood and genre:</strong> grade level, mood or theme, and learning goal. Parents preferred pre-curated lists over algorithmic recommendations.</li>
-          <li><strong>Intuitive progress tracking:</strong> To Read, Reading and Done. We simplified from five states to three after testing.</li>
-          <li><strong>Motivation through ratings and achievements:</strong> completion percentage, ratings breakdown, most-read genre and lists completed. Lightweight gamification was added to boost engagement.</li>
+          <li><strong>Guided onboarding</strong> &mdash; introduce curation, tracking and milestones progressively rather than all at once.</li>
+          <li><strong>Curated discovery</strong> by grade level, mood or theme, and learning goal.</li>
+          <li><strong>Intuitive progress tracking</strong> &mdash; To Read, Reading, Done.</li>
+          <li><strong>Motivation through ratings and achievements</strong> &mdash; completion percentage, ratings breakdown, most-read genre, lists completed.</li>
         </ol>
+
+        <div class="tradeoff">
+          <p><strong>Key decision:</strong> I cut progress tracking from five states to three after testing. The extra states were more accurate and measurably worse to use &mdash; they made parents stop and classify instead of just logging. Accuracy of the data lost to likelihood of the data being entered at all.</p>
+        </div>
+
+        <div class="tradeoff">
+          <p><strong>Key decision:</strong> curation over personalisation. An algorithmic recommender is the more defensible long-term moat, but it was the wrong MVP: it needs data the product does not have yet, and it answers a question parents said they did not want answered by a machine.</p>
+        </div>
       </div>
     </section>
 
@@ -99,41 +118,32 @@
 
     <section class="section">
       <div class="wrap story">
-        <h2>Design process</h2>
-        <ul>
-          <li>Visual representation of progress</li>
-          <li>Segmented tabs for To Read, Reading and Done</li>
-          <li>Achievements tied to milestones</li>
-          <li>Customizable reading reports</li>
-        </ul>
-        <p>This guided the MVP roadmap, balancing delight with core value delivery.</p>
-
         <h2>Outcome</h2>
+        <p>The MVP definition balanced delight against core value delivery:</p>
         <ul>
-          <li><strong>Simple:</strong> minimal steps from discovery to tracking</li>
-          <li><strong>Encouraging:</strong> language and visuals celebrate progress</li>
-          <li><strong>Empowering:</strong> parents feel in control</li>
+          <li><strong>Simple:</strong> minimal steps from discovery to tracking.</li>
+          <li><strong>Encouraging:</strong> language and visuals celebrate progress.</li>
+          <li><strong>Empowering:</strong> parents feel in control.</li>
         </ul>
-        <p class="pull">"It feels like I'm finally part of my child's learning, not just monitoring it."</p>
+        <div class="todo">
+          <p>If the app has shipped or been tested with real parents, add numbers here: users, books tracked, retention after week one, or how many testers completed onboarding. If it is still a concept, say so plainly &mdash; a well-reasoned concept is credible, an unlabelled one is not.</p>
+        </div>
 
-        <h2>Next steps</h2>
+        <h2>What's next</h2>
         <ul>
           <li>Custom book lists</li>
           <li>Share and discover lists</li>
           <li>Sign-in and multiple profile support</li>
           <li>Teacher-recommended lists and tracking</li>
         </ul>
+
+        <h2>What I took from it</h2>
+        <p>Progressive disclosure and celebrating small wins kept parents feeling capable instead of monitored. The hardest product decision was removing accuracy to get adoption.</p>
+
+        <p><a href="https://www.getbooklist.com/" target="_blank" rel="noopener">Visit Book List</a></p>
       </div>
     </section>
 
-    <section class="section section--tint">
-      <div class="wrap">
-        <div class="note">
-          <p><strong>Key takeaway:</strong> progressive disclosure and celebration of small wins helped parents feel confident, not overwhelmed.</p>
-          <a class="btn" href="https://www.getbooklist.com/" target="_blank" rel="noopener">Visit Book List</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">

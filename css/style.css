@@ -307,3 +307,63 @@ p { margin: 0 0 1em; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* ----- PM case-study components ----- */
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.5rem;
+  margin: 1.5rem 0 0;
+  box-shadow: var(--shadow);
+}
+.case-meta dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.2rem;
+}
+.case-meta dd { margin: 0; font-weight: 500; }
+
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.metric {
+  background: var(--sun-tint);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+}
+.metric strong { display: block; font-family: var(--font-serif); font-size: 1.9rem; line-height: 1.1; color: var(--ink); }
+.metric span { color: var(--ink-soft); font-size: 0.93rem; }
+
+.tradeoff {
+  background: var(--sky-tint);
+  border-left: 4px solid var(--sky-strong);
+  border-radius: 0 12px 12px 0;
+  padding: 1rem 1.2rem;
+  margin: 1.4rem 0;
+}
+.tradeoff strong { color: var(--sky-strong); }
+.tradeoff p:last-child { margin-bottom: 0; }
+
+/* Draft marker: replace the contents, then delete the .todo wrapper. */
+.todo {
+  background: repeating-linear-gradient(45deg, #FFF8E1, #FFF8E1 10px, #FFF3CD 10px, #FFF3CD 20px);
+  border: 2px dashed #C9A227;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin: 1.4rem 0;
+  color: #6B5200;
+}
+.todo::before {
+  content: "TO FILL IN";
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+}
+.todo p:last-child { margin-bottom: 0; }
