@@ -83,6 +83,11 @@ p { margin: 0 0 1em; }
   font-weight: 600;
   font-size: 1.1rem;
 }
+.brand-logo {
+  height: 34px;
+  width: auto;
+  margin-left: 0.2rem;
+}
 .brand .avatar {
   width: 46px;
   height: 46px;
