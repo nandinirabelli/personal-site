@@ -4,421 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Library Project | Personal Projects</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap CSS -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link href="./css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="description" content="How a birthday fundraiser grew into a yearly campaign placing storybooks in libraries and schools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand" href="./index.html">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="careerDropdown" role="button" data-bs-toggle="dropdown">Career Projects</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./biglifejournal.html">BigLifeJournal</a></li>
-              <li><a class="dropdown-item" href="./duolingo.html">Duolingo</a></li>
-              <li><a class="dropdown-item" href="./almabase.html">Almabase</a></li>
-              <li><a class="dropdown-item" href="./gyanville.html">Gyanville</a></li>
-              <li><a class="dropdown-item" href="./tfi.html">Teach For India</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" data-bs-toggle="dropdown">Personal Projects</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="./the-library-project.html">The Library Project</a></li>
-              <li><a class="dropdown-item" href="./booklist.html">Book List</a></li>
-              <li><a class="dropdown-item" href="./lumino.html">Lumino</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="https://praana.medium.com/" target="_blank">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="./my-journey.html">My Journey</a></li>
-        </ul>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Home"><img src="assets/logo.png" alt="Logo" class="logo"></a>
+      <nav class="nav" aria-label="Main">
+        <details class="dropdown">
+          <summary>Career Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="biglifejournal.html">BigLifeJournal</a></li>
+            <li><a href="duolingo.html">Duolingo</a></li>
+            <li><a href="almabase.html">Almabase</a></li>
+          </ul>
+        </details>
+        <details class="dropdown">
+          <summary>Personal Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="the-library-project.html" aria-current="page">The Library Project</a></li>
+            <li><a href="booklist.html">Book List</a></li>
+            <li><a href="lumino.html">Lumino</a></li>
+          </ul>
+        </details>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Blog</a>
+        <a href="my-journey.html">My Journey</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Personal project</span>
+        <h1>The Library Project</h1>
+        <p class="lead">My journey of building libraries across India, one birthday at a time.</p>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero-project d-flex align-items-center">
-    <div class="overlay"></div>
-    <div class="container text-center text-lg-start position-relative">
-      <h1 class="hero-title">The Library Project</h1>
-      <p class="hero-subtitle">My Journey of Building Libraries Across India</p>
-    </div>
-  </section>
-
-  <!-- Project Story Section -->
-  <!-- Project Story Section
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-
-        <!-- Item 1
-        <div class="row align-items-center mb-5">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Placeholder">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">Where It All Began</h3>
-            <p>My journey with this project started at home. As parents, we tried many ways to spark our daughter Leela’s curiosity, but it wasn’t until a visit to a beautiful library that everything changed. That visit transformed her relationship with books—she fell in love with stories, and I saw firsthand how powerful access to a library could be for a child.</p>
-          </div>
+    <section class="section" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="gallery" aria-label="Project gallery">
+          <img src="assets/library1.png" alt="Library shelves with children's books">
+          <img src="assets/library2.jpeg" alt="Children's books on library shelves">
+          <img src="assets/library3.jpeg" alt="Library reading space">
+          <img src="assets/library4.jpeg" alt="Library reading corner">
         </div>
-
-        <!-- Item 2 
-        <div class="row align-items-center mb-5 flex-md-row-reverse">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Placeholder">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">A Birthday With a Difference</h3>
-            <p>When Leela turned four, we decided to celebrate her birthday differently. Instead of gifts and parties, we set out to raise funds for children’s books. What began with ten Gram Panchayat libraries in Udupi, Karnataka, soon grew beyond my expectations as the community rallied behind the cause.</p>
-          </div>
-        </div>
-
-        <!-- Item 3 
-        <div class="row align-items-center mb-5">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Placeholder">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">Growing the Mission</h3>
-            <p>The following year, for Leela’s fifth birthday, we expanded our efforts to Telangana. By the time she turned six, our campaign had grown—1,400 storybooks reached three schools supported by the Rural Development Foundation, directly benefiting over 1,500 students.</p>
-          </div>
-        </div>
-
-        <!-- Item 4 
-        <div class="row align-items-center mb-5 flex-md-row-reverse">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Placeholder">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">Weathering the Challenges</h3>
-            <p>The COVID-19 pandemic made fundraising difficult, but through blogs, social media, and YouTube, we continued sharing impact stories and found people who believed in the same vision.</p>
-          </div>
-        </div>
-
-        <!-- Item 5
-        <div class="row align-items-center mb-5">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Placeholder">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">The Joy of Impact</h3>
-            <p>Over three years, thousands of books reached children who might otherwise never have had access to them. Seeing their excitement and curiosity has been the most meaningful reward.</p>
-          </div>
-        </div>
-
-        <!-- Item 6
-        <div class="row align-items-center mb-5 flex-md-row-reverse">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <img src="https://via.placeholder.com/600x400" class="img-fluid rounded shadow-sm" alt="Placeholder">
-          </div>
-          <div class="col-md-6">
-            <h3 class="mb-3">Turning Pages Toward the Future</h3>
-            <p>My dream is to create vibrant community libraries across Telangana—spaces where children and families can discover the joy of reading. With every book shared, we’re writing new possibilities for the future.</p>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
-</section>
--->
-  <!-- Project Story Section -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+    </section>
 
-        <h3 class="mb-3">Where It All Began</h3>
-        <p>My journey with this project started at home. As parents, we tried many ways to spark our daughter Leela’s curiosity, but it wasn’t until a visit to a beautiful library that everything changed. That visit transformed her relationship with books—she fell in love with stories, and I saw firsthand how powerful access to a library could be for a child. I knew then that I wanted other children, especially in rural communities, to have that same chance.</p>
+    <section class="section section--tint">
+      <div class="wrap story">
+        <h2>Where it all began</h2>
+        <p>My journey with this project started at home. As parents, we tried many ways to spark our daughter Leela's curiosity, but it wasn't until a visit to a beautiful library that everything changed. That visit transformed her relationship with books. She fell in love with stories, and I saw firsthand how powerful access to a library could be for a child. I knew then that I wanted other children, especially in rural communities, to have that same chance.</p>
 
-        <h3 class="mt-5 mb-3">A Birthday With a Difference</h3>
-        <p>When Leela turned four, we decided to celebrate her birthday differently. Instead of gifts and parties, we set out to raise funds for children’s books. What began with ten Gram Panchayat libraries in Udupi, Karnataka, soon grew beyond my expectations as the community rallied behind the cause. The success of that first campaign gave me the confidence to continue.</p>
+        <h2>A birthday with a difference</h2>
+        <p>When Leela turned four, we decided to celebrate differently. Instead of gifts and parties, we set out to raise funds for children's books. What began with ten Gram Panchayat libraries in Udupi, Karnataka, grew beyond my expectations as the community rallied behind the cause. The success of that first campaign gave me the confidence to continue.</p>
 
-        <h3 class="mt-5 mb-3">Growing the Mission</h3>
-        <p>The following year, for Leela’s fifth birthday, we expanded our efforts to Telangana. With the support of friends, family, and well-wishers, we brought books to orphaned and underprivileged children in Warangal, through the Sai Spandan Trust and local schools. By the time she turned six, our campaign had grown even further — 1,400 storybooks reached three schools supported by the Rural Development Foundation in rural Telangana, directly benefiting over 1,500 students. Each step was fueled by the belief that storybooks open doors to imagination, curiosity, and new possibilities.</p>
+        <h2>Growing the mission</h2>
+        <p>The following year, for Leela's fifth birthday, we expanded to Telangana. With the support of friends, family and well-wishers, we brought books to orphaned and underprivileged children in Warangal. By her sixth birthday, 1,400 storybooks had reached three schools supported by the Rural Development Foundation, directly benefiting over 1,500 students.</p>
+        <p class="pull">Each step was fueled by the belief that storybooks open doors to imagination, curiosity and new possibilities.</p>
 
-        <h3 class="mt-5 mb-3">Weathering the Challenges</h3>
-        <p>Along the way, challenges did arise — the COVID-19 pandemic made fundraising more difficult, as donations to educational causes declined. But I didn’t want to give up. Through blogs, social media, and a dedicated YouTube channel, I shared stories of impact and reached out to people who believed in the same vision. Their encouragement and support carried us forward, one campaign at a time.</p>
+        <h2>Weathering the challenges</h2>
+        <p>The COVID-19 pandemic made fundraising harder, as donations to educational causes declined. I didn't want to give up. Through blogs, social media and a dedicated YouTube channel, I shared stories of impact and reached out to people who believed in the same vision. Their encouragement carried us forward, one campaign at a time.</p>
 
-        <h3 class="mt-5 mb-3">The Joy of Impact</h3>
-        <p>Looking back, I am grateful that a small idea to mark Leela’s birthday has blossomed into something much larger. Over three years, we’ve been able to place thousands of books into the hands of children who might otherwise never have had the chance to read them. Seeing their excitement, their curiosity, and their growing love for reading has been the most meaningful outcome of all.</p>
-
-        <h3 class="mt-5 mb-3">Turning Pages Toward the Future</h3>
-        <p>But this is only the beginning. My dream is to create vibrant community libraries in Telangana and beyond—spaces that bring together not just children, but whole families, around the joy of reading. With every book shared, I hope we are also writing new possibilities into the future of these communities.</p>
-
+        <h2>Turning pages toward the future</h2>
+        <p>This is only the beginning. My dream is to create vibrant community libraries in Telangana and beyond, spaces that bring together not just children but whole families around the joy of reading.</p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-  <!-- Project Gallery Section -->
-<section class="project-gallery py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Project Gallery</h2>
-
-    <!-- Main Carousel -->
-    <div id="projectCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/library1.png" class="d-block w-100 rounded" alt="Gallery 1">
+    <section class="section">
+      <div class="wrap">
+        <span class="eyebrow">Yearly campaigns</span>
+        <h2>Three birthdays, three campaigns</h2>
+        <div class="grid" style="margin-top: 1.5rem;">
+          <div class="campaign">
+            <img src="assets/project-2021.jpg" alt="2021 campaign">
+            <div class="year">2021</div>
+            <strong>On Leela's 4th birthday</strong>
+            <p>Ten Gram Panchayat libraries in Udupi District, Karnataka.</p>
+            <p>Goal: 960 books. Received: 1,010. Successful.</p>
+          </div>
+          <div class="campaign">
+            <img src="assets/project-2022.jpg" alt="2022 campaign">
+            <div class="year">2022</div>
+            <strong>Celebrating Leela's 5th birthday</strong>
+            <p>Helping her share the joy of reading with orphaned children in Telangana.</p>
+            <p>Goal: 1,080 books. Received: 1,331. Successful.</p>
+          </div>
+          <div class="campaign">
+            <img src="assets/project-2023.jpg" alt="2023 campaign">
+            <div class="year">2023</div>
+            <strong>Celebrating Leela's 6th birthday</strong>
+            <p>Storybooks for rural schools in Telangana, supported by the Rural Development Foundation.</p>
+            <p>Goal: 1,000 books. Received: 1,392. Successful.</p>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="assets/library2.jpeg" class="d-block w-100 rounded" alt="Gallery 2">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/library3.jpeg" class="d-block w-100 rounded" alt="Gallery 3">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/library4.jpeg" class="d-block w-100 rounded" alt="Gallery 4">
-        </div>
-        <!-- Add more slides here -->
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </section>
+  </main>
 
-    <!-- Thumbnails -->
-    <div class="d-flex justify-content-center gap-2 flex-wrap" id="carousel-thumbnails">
-      <img src="assets/library1.png" class="img-thumbnail thumb-item" data-bs-target="#projectCarousel" data-bs-slide-to="0" alt="Thumb 1">
-      <img src="assets/library2.jpeg" class="img-thumbnail thumb-item" data-bs-target="#projectCarousel" data-bs-slide-to="1" alt="Thumb 2">
-      <img src="assets/library3.jpeg" class="img-thumbnail thumb-item" data-bs-target="#projectCarousel" data-bs-slide-to="2" alt="Thumb 3">
-      <img src="assets/library4.jpeg" class="img-thumbnail thumb-item" data-bs-target="#projectCarousel" data-bs-slide-to="3" alt="Thumb 4">
-      <!-- Add more thumbnails -->
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- Yearly Campaigns Tabs -->
-  <section class="project-details py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Yearly Campaigns</h2>
-
-      <ul class="nav nav-tabs justify-content-center mb-4" id="yearTabs" role="tablist">
-        <li class="nav-item">
-          <button class="nav-link active" id="tab-2021" data-bs-toggle="tab" data-bs-target="#content-2021" type="button">2021</button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" id="tab-2022" data-bs-toggle="tab" data-bs-target="#content-2022" type="button">2022</button>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link" id="tab-2023" data-bs-toggle="tab" data-bs-target="#content-2023" type="button">2023</button>
-        </li>
-      </ul>
-
-      <div class="tab-content" id="yearTabsContent">
-        <div class="tab-pane fade show active" id="content-2021">
-  <div class="row align-items-center">
-    <!-- Text Column -->
-    <div class="col-lg-7">
-      <h3>On the 4th Birthday of Leela</h3>
-      <p><strong>Raising funds for 10 Gram Panchayat Libraries in Udupi District, Karnataka</strong></p>
-      <p><b>Books Goal:</b> 960 | <b>Books Received:</b> 1010 | <i>Successful</i></p>
-      <p>One visit to a very beautiful, big library transformed Leela's relationship with books.</p>
-      <a href="https://donateabook.org.in/product/raising-funds-for-libraries-in-gram-panchayats-of-udupi-district-of-karnataka/" target="_blank">Project Link</a>
-    </div>
-
-    <!-- Image Column -->
-    <div class="col-lg-5 text-center mt-4 mt-lg-0">
-      <img src="assets/project-2021.jpg" alt="Project 2021" class="img-fluid rounded shadow">
-    </div>
-  </div>
-</div>
-
-        <div class="tab-pane fade" id="content-2022">
-          <div class="row align-items-center">
-             <!-- Text Column -->
-    <div class="col-lg-7">
-          <h3>Celebrate Leela’s 5th Birthday</h3>
-          <p><strong>Helping her share the joy of reading with orphan children in Telangana</strong></p>
-          <p><b>Books Goal:</b> 1080 | <b>Books Received:</b> 1331 | <i>Successful</i></p>
-          <p>With your help, we gifted storybooks to children in Swamy Vivekananda Orphanage Home and Sai Spandana Digi School. <a href="http://www.saisevatrust.in/" target="_blank">Visit Sai Seva Trust</a></p>
-          <a href="https://donateabook.org.in/product/celebrate-leelas-5th-birthday/?fbclid=IwY2xjawI3vMlleHRuA2FlbQIxMAABHU1Zu7qZea7svIkObpmkCz60rr_-kaY9MNT4k5GyJXp6XOpZfxI_tRKu0g_aem_-L4AHH3suAyUtHOAMrksCw" target="_blank">Project Link</a>
-        </div>
-        <!-- Image Column -->
-        <div class="col-lg-5 text-center mt-4 mt-lg-0">
-      <img src="assets/project-2022.jpg" alt="Project 2021" class="img-fluid rounded shadow">
-    </div>
-  </div>
-</div>
-        <div class="tab-pane fade" id="content-2023">
-          <div class="row align-items-center">
-             <!-- Text Column -->
-    <div class="col-lg-7">
-          <h3>Celebrating Leela’s 6th Birthday</h3>
-          <p><strong>Raising funds for children’s storybooks in Telangana</strong></p>
-          <p><b>Books Goal:</b> 1000 | <b>Books Received:</b> 1392 | <i>Successful</i></p>
-          <p>Funds provided books for The Rural Development Foundation (RDF). <a href="https://www.facebook.com/RuralDevelopmentFoundation" target="_blank">RDF Facebook</a> | <a href="https://rdfblog.wordpress.com/" target="_blank">RDF Blog</a></p>
-          <a href="https://donateabook.org.in/product/celebrating-leelas-6th-birthday-by-raising-funds-for-childrens-storybooks/" target="_blank">Project Link</a>
-        </div>
-        <!-- Image Column -->
-        <div class="col-lg-5 text-center mt-4 mt-lg-0">
-      <img src="assets/project-2023.jpg" alt="Project 2021" class="img-fluid rounded shadow">
-    </div>
-  </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer bg-light border-top py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-2">&copy; 2025 Nandini Priya Rabelli. All rights reserved.</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://twitter.com/" target="_blank" class="text-dark"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="https://linkedin.com/" target="_blank" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://github.com/" target="_blank" class="text-dark"><i class="fab fa-github fa-lg"></i></a>
-        <a href="https://instagram.com/" target="_blank" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
-      </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2025 Nandini Priya Rabelli. All rights reserved.</span>
+      <nav class="social" aria-label="Social">
+        <a href="mailto:nandinipriya.r@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nandinipriyarabelli/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@luminofun" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Medium</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="./js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom Styles for Project Page Hero -->
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .hero-project {
-      position: relative;
-      display: flex;
-      align-items: center;
-      min-height: 60vh;
-      background: url('assets/library1.png') center center/cover no-repeat;
-      color: #fff;
-    }
-    .hero-project .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-    .hero-project .container {
-      position: relative;
-      z-index: 2;
-    }
-    .hero-project .hero-title {
-      font-family: 'Caveat', cursive;
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .hero-project .hero-subtitle {
-      font-family: 'Caveat', cursive;
-      font-size: 1.75rem;
-      font-weight: 400;
-      color: #f0f0f0;
-    }
-
-.project-gallery h2 {
-  font-family: 'Caveat', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.project-gallery img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.project-gallery h2 {
-  font-family: 'Caveat', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-
-#projectCarousel img {
-  max-height: 600px;
-  object-fit: cover;
-}
-
-#carousel-thumbnails {
-  margin-top: 1rem;
-}
-
-.thumb-item {
-  width: 100px;
-  height: 70px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s, border 0.3s;
-  border: 2px solid transparent;
-}
-
-.thumb-item:hover, .thumb-item.active-thumb {
-  transform: scale(1.05);
-  border-color: #12cedf; /* Highlight color for active/hover */
-}
-
-
-
-
-  </style>
-  <script>
-const thumbs = document.querySelectorAll('.thumb-item');
-const carousel = document.getElementById('projectCarousel');
-
-thumbs.forEach((thumb, index) => {
-  thumb.addEventListener('click', () => {
-    const bsCarousel = bootstrap.Carousel.getInstance(carousel);
-    bsCarousel.to(index);
-  });
-});
-
-// Update active thumbnail on slide
-carousel.addEventListener('slid.bs.carousel', function(e) {
-  thumbs.forEach(thumb => thumb.classList.remove('active-thumb'));
-  thumbs[e.to].classList.add('active-thumb');
-});
-</script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    easing: 'ease-out-cubic',
-    once: true
-  });
-</script>
-
+  <script src="js/menu.js" defer></script>
 </body>
 </html>
