@@ -73,7 +73,24 @@ p { margin: 0 0 1em; }
   padding: 0.6rem 0;
   flex-wrap: wrap;
 }
-.brand img { height: 44px; width: auto; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.brand .avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--blush);
+  box-shadow: var(--shadow);
+}
 .nav { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
 .nav > a,
 .nav summary {
