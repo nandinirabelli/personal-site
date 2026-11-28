@@ -424,3 +424,4 @@ th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; colo
 .tag.p3 { background: #EEF1F5; color: #475467; }
 
 @media (max-width: 640px) { .two { grid-template-columns: 1fr; } }
+.gallery--portrait img { aspect-ratio: 5 / 7; object-fit: contain; background: #fff; flex-basis: min(60%, 320px); }
