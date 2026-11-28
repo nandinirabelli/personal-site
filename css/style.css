@@ -425,3 +425,12 @@ th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; colo
 
 @media (max-width: 640px) { .two { grid-template-columns: 1fr; } }
 .gallery--portrait img { aspect-ratio: 5 / 7; object-fit: contain; background: #fff; flex-basis: min(60%, 320px); }
+.videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin: 1rem 0 1.4rem; }
+.video { display: flex; flex-direction: column; gap: 0.25rem; text-decoration: none; color: inherit; }
+.video img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: var(--sky-tint, #e8f8fc); box-shadow: var(--shadow); }
+.video strong { font-size: 0.95rem; line-height: 1.25; }
+.video span { font-size: 0.82rem; opacity: 0.75; }
+.video:hover strong { color: var(--coral-strong); }
+.sheets { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0 1.4rem; }
+.sheets img { height: 150px; width: auto; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); background: #fff; box-shadow: var(--shadow); }
+.sheets a:hover img { transform: translateY(-2px); }
