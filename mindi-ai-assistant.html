@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindi AI Assistant | Career Projects</title>
+  <meta name="description" content="Finding and fixing the friction in a member-facing AI assistant through log review, prompt changes and written test cases.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Home"><img src="assets/logo.png" alt="Logo" class="logo"></a>
+      <nav class="nav" aria-label="Main">
+        <details class="dropdown">
+          <summary>Career Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="biglifejournal.html">BigLifeJournal</a></li>
+            <li><a href="duolingo.html">Duolingo</a></li>
+            <li><a href="almabase.html">Almabase</a></li>
+            <li><a href="morning-priority-digest.html">Morning Priority Digest</a></li>
+            <li><a href="mindi-ai-assistant.html" aria-current="page">Mindi AI Assistant</a></li>
+          </ul>
+        </details>
+        <details class="dropdown">
+          <summary>Personal Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="the-library-project.html">The Library Project</a></li>
+            <li><a href="booklist.html">Book List</a></li>
+            <li><a href="lumino.html">Lumino</a></li>
+          </ul>
+        </details>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Blog</a>
+        <a href="my-journey.html">My Journey</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">AI product · Prompt design · QA</span>
+        <h1>Mindi: Finding and Fixing the Friction in an AI Assistant</h1>
+        <p class="lead">Mindi is a member-facing AI assistant that recommends resources to parents and professionals. I analysed real chat logs, found the recurring failures, changed the prompt and routing rules, and tested each change with a written case set before release.</p>
+        <dl class="case-meta">
+          <div><dt>My role</dt><dd>Product lead for AI assistant behaviour</dd></div>
+          <div><dt>Platform</dt><dd>Chatbase, no-code AI assistant</dd></div>
+          <div><dt>Partners</dt><dd>Support, Content, Dev team</dd></div>
+          <div><dt>Method</dt><dd>Log review, prompt tests, release</dd></div>
+          <div><dt>Status</dt><dd>Pushed after test rounds</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap story story--wide">
+        <h2>The problem</h2>
+        <p>Mindi launched as a limited first version with a parent-coach framing. Over time it was being used for more than resource search. Members asked about access, cancellations, downloads and kits, and first-time visitors used it as a starting point. The team needed the assistant to answer well for both parents and professionals, without the cost of a custom build.</p>
+        <p>Chat logs showed the same few failure modes again and again. Each one hurt the member experience in a way a single fix could address.</p>
+
+        <h2>What I found in the logs</h2>
+        <table>
+          <tr><th>Failure pattern</th><th>What members experienced</th><th>Fix I tried</th></tr>
+          <tr><td>Loops on follow-up</td><td>A reply with two questions in it made a simple "yes" ambiguous, so the assistant asked again.</td><td>Single-question replies and an explicit yes/no branch.</td></tr>
+          <tr><td>Support questions in a resource bot</td><td>Account, payment and cancellation questions took several turns before the assistant routed them to support.</td><td>An early routing rule for account keywords.</td></tr>
+          <tr><td>Kit links not returned</td><td>Requests for a named kit were deflected, even though the links existed.</td><td>A keyword-to-link map in the prompt, with a clear limit on how far it could scale.</td></tr>
+          <tr><td>Age asked repeatedly</td><td>A parent gave a child's age, then was asked again on each topic change.</td><td>Logged as a product gap. Not solvable within the prompt.</td></tr>
+          <tr><td>Parent framing for professionals</td><td>Phrases like "how old is your child" assumed a parent, which confused educators and therapists.</td><td>Reworded prompt language and removed child-specific questions for professional users.</td></tr>
+        </table>
+        <div class="tradeoff"><p><strong>Pattern I noticed:</strong> adding more rules to one prompt sometimes made answers less reliable, so each change needed a regression check, not just a check of the new behaviour.</p></div>
+
+        <h2>My approach</h2>
+        <svg class="flow" viewBox="0 0 760 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logs lead to patterns, then prompt changes, then case tests, then release">
+          <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5A5A5A"/></marker></defs>
+          <rect x="5" y="30" width="135" height="60" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="72" y="56" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">1. Read logs</text>
+          <text x="72" y="74" text-anchor="middle" font-size="12" fill="#5A5A5A">Group by pattern</text>
+          <line x1="140" y1="60" x2="168" y2="60" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="171" y="30" width="135" height="60" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="238" y="56" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">2. Rewrite</text>
+          <text x="238" y="74" text-anchor="middle" font-size="12" fill="#5A5A5A">Prompt and routing</text>
+          <line x1="306" y1="60" x2="334" y2="60" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="337" y="30" width="135" height="60" rx="14" fill="#D8F3E0" stroke="#2F8F4E"/>
+          <text x="404" y="56" text-anchor="middle" font-size="14" font-weight="600" fill="#2F8F4E">3. Test cases</text>
+          <text x="404" y="74" text-anchor="middle" font-size="12" fill="#2F8F4E">Fixed set, re-run</text>
+          <line x1="472" y1="60" x2="500" y2="60" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="503" y="30" width="125" height="60" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="566" y="56" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">4. Release</text>
+          <text x="566" y="74" text-anchor="middle" font-size="12" fill="#5A5A5A">After sign-off</text>
+          <line x1="628" y1="60" x2="656" y2="60" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="659" y="30" width="95" height="60" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="706" y="56" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">5. Watch</text>
+          <text x="706" y="74" text-anchor="middle" font-size="12" fill="#5A5A5A">Next log review</text>
+        </svg>
+        <h3>1. Read the logs before changing anything</h3>
+        <p>I reviewed real conversations and grouped them by the reason a member got stuck. That kept the work tied to what members actually asked, not to what the team assumed they would ask.</p>
+        <h3>2. Rewrite the smallest thing that could work</h3>
+        <p>Where a fix was possible through the prompt, I changed the prompt. Where it was not, I logged it as a product gap with the evidence attached.</p>
+        <h3>3. Test against a fixed case set</h3>
+        <p>Every change was checked against the same set of written cases, so a fix for one pattern could not quietly break another.</p>
+        <h3>4. Release after sign-off, then watch</h3>
+        <p>I pushed the updated version only after several test rounds and sign-off from the operations lead, then kept an eye on the next round of logs.</p>
+
+        <h2>How I wrote the test cases</h2>
+        <p>Each case has an intent, a realistic member message, the expected behaviour, and a pass or fail result. Cases cover the common flows and the known failure patterns above.</p>
+        <div class="tc">Case:       Parent asks for a named kit by name
+Input:      "Where can I find the screen time toolkit?"
+Expected:   Returns that kit's link, no age question
+Check:      Pass / Fail, with the reply pasted in</div>
+        <div class="tc">Case:       Account question in a resource bot
+Input:      "I can't cancel my subscription"
+Expected:   Routes to the support team in the first reply
+Check:      Pass / Fail</div>
+        <div class="tc">Case:       Professional user, no child mentioned
+Input:      "I'm a school counsellor looking for activities for my class"
+Expected:   Resource-focused reply, no assumption of a parent</div>
+        <div class="todo"><p><strong>Add here:</strong> total cases, how many were re-run after each change, and the pass rate before and after. Use only figures that are approved for public use.</p></div>
+
+        <h2>Key decisions</h2>
+        <h3>Prompt fixes first, custom build later</h3>
+        <p>I tested prompt changes before asking for a custom build. Some problems improved, and others, like remembering a child's age across a session, could not be fixed in the prompt. That gave the team concrete evidence for the next decision.</p>
+        <h3>Route early, don't keep the member guessing</h3>
+        <p>Account and billing questions go to a human as early as possible. A resource bot should not try to solve those itself.</p>
+        <h3>Keep the testing and the decision separate</h3>
+        <p>I could say what the prompt could and could not do. The choice of whether to invest in a larger build was for the leadership team, so I presented the trade-offs and the evidence without making that call.</p>
+
+        <h2>Impact</h2>
+        <div class="metrics">
+          <div class="metric"><strong>[X]</strong><span>Test cases in the set</span></div>
+          <div class="metric"><strong>[X] to [X]%</strong><span>Pass rate, first run to release</span></div>
+          <div class="metric"><strong>[X]</strong><span>Patterns resolved in the prompt</span></div>
+        </div>
+        <p>The clearest outcome was a better-defined boundary. Some problems were fixed in the prompt, and others were documented as needing product changes, so the next investment could be made on evidence.</p>
+
+        <h2>What I learned</h2>
+        <ul>
+          <li>An AI assistant is a product with a limited surface. Before adding rules, test what the surface can actually support.</li>
+          <li>Written test cases matter more than a quick check. They catch regressions that a spot check misses.</li>
+          <li>Support routing is a product decision as much as a prompt decision. Members feel it immediately.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2025 Nandini Priya Rabelli. All rights reserved.</span>
+      <nav class="social" aria-label="Social">
+        <a href="mailto:nandinipriya.r@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nandinipriyarabelli/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@luminofun" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Medium</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/menu.js" defer></script>
+</body>
+</html>

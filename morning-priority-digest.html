@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Priority Digest | Career Projects</title>
+  <meta name="description" content="How I automated daily triage of support email and ClickUp hand-offs into one ranked Slack brief.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Home"><img src="assets/logo.png" alt="Logo" class="logo"></a>
+      <nav class="nav" aria-label="Main">
+        <details class="dropdown">
+          <summary>Career Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="biglifejournal.html">BigLifeJournal</a></li>
+            <li><a href="duolingo.html">Duolingo</a></li>
+            <li><a href="almabase.html">Almabase</a></li>
+            <li><a href="morning-priority-digest.html" aria-current="page">Morning Priority Digest</a></li>
+            <li><a href="mindi-ai-assistant.html">Mindi AI Assistant</a></li>
+          </ul>
+        </details>
+        <details class="dropdown">
+          <summary>Personal Projects</summary>
+          <ul class="dropdown__menu">
+            <li><a href="the-library-project.html">The Library Project</a></li>
+            <li><a href="booklist.html">Book List</a></li>
+            <li><a href="lumino.html">Lumino</a></li>
+          </ul>
+        </details>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Blog</a>
+        <a href="my-journey.html">My Journey</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Automation · Product &amp; Data Strategy</span>
+        <h1>Morning Priority Digest</h1>
+        <p class="lead">I automated the daily triage of support email and ClickUp hand-offs into one ranked Slack brief, so the team starts the day on the messages that matter most instead of hunting through two inboxes.</p>
+        <dl class="case-meta">
+          <div><dt>My role</dt><dd>Product lead, end to end</dd></div>
+          <div><dt>Team</dt><dd>Operations, Support, Product</dd></div>
+          <div><dt>Sources</dt><dd>Gmail, ClickUp, Stripe receipts</dd></div>
+          <div><dt>Delivery</dt><dd>Slack, every morning</dd></div>
+          <div><dt>Status</dt><dd>Live, in test window</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap story story--wide">
+        <h2>The problem</h2>
+        <p>Customer messages arrived by email across several inboxes. Some needed a reply within hours, such as a lapsed subscriber or a billing error. Others were routine, like a receipt or a calendar cancellation. Team members spent the first part of each morning sorting the pile before doing any real work, and urgent items could sit unseen under routine ones.</p>
+        <p>Hand-offs were also scattered. When a message needed a person to act, it was moved into a ClickUp list by hand, and nothing showed the whole picture in one place.</p>
+        <div class="tradeoff"><p><strong>The goal:</strong> one brief each morning that answers "what do I handle first today?" in under five minutes, with nothing urgent buried.</p></div>
+
+        <h2>What the team sees each morning</h2>
+        <p>The digest posts to a dedicated Slack channel. Each item shows when it arrived, who it came from, a one-line subject, and a short preview. Below is a sample built from invented example data.</p>
+
+        <div class="slack">
+          <div class="head">
+            <div class="avatar">D</div>
+            <div><span class="name">Priority Digest</span> <span class="time">· 7:00 AM</span></div>
+          </div>
+          <div class="sub"><strong>Morning priority list: Example Day</strong></div>
+
+          <h4>New customers added in the last 24 hours</h4>
+          <div class="row">3 new accounts (2 trials, 1 paid)</div>
+
+          <h4>P1 (act first)</h4>
+          <div class="row p1"><span class="tag p1">P1</span> Payment failed, card on file expired · Sample Customer A · 2:14 AM</div>
+
+          <h4>P2 (reply soon)</h4>
+          <div class="row p2"><span class="tag p2">P2</span> Asked to remove seats and add a new coach · Sample Customer B · 4:13 AM</div>
+          <div class="row p2"><span class="tag p2">P2</span> Follow-up on a webinar partnership, no reply in 5 days · Sample Partner C · Yesterday</div>
+
+          <h4>P3 (FYI)</h4>
+          <div class="row p3"><span class="tag p3">P3</span> Platform notice about payout settings · Vendor notice</div>
+
+          <h4>New subscriptions</h4>
+          <div class="row">2 new professional memberships, 1 trial started</div>
+        </div>
+        <p class="fine">Names, emails and order numbers are replaced with sample values.</p>
+
+        <h2>How it works</h2>
+        <svg class="flow" viewBox="0 0 760 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gmail and ClickUp feed a classifier that ranks items into a Slack digest">
+          <defs>
+            <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5A5A5A"/></marker>
+          </defs>
+          <rect x="10" y="20" width="170" height="54" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="95" y="44" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">Gmail</text>
+          <text x="95" y="62" text-anchor="middle" font-size="12" fill="#5A5A5A">Support inbox</text>
+          <rect x="10" y="96" width="170" height="54" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="95" y="120" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">ClickUp</text>
+          <text x="95" y="138" text-anchor="middle" font-size="12" fill="#5A5A5A">Manual hand-off list</text>
+          <line x1="180" y1="47" x2="240" y2="75" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <line x1="180" y1="123" x2="240" y2="95" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="245" y="50" width="200" height="70" rx="14" fill="#D2F4FB" stroke="#137C99"/>
+          <text x="345" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="#137C99">Classify and rank</text>
+          <text x="345" y="100" text-anchor="middle" font-size="12" fill="#137C99">P1 / P2 / P3 + new customers</text>
+          <line x1="450" y1="85" x2="510" y2="85" stroke="#5A5A5A" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="515" y="50" width="235" height="70" rx="14" fill="#FFFFFF" stroke="#E6E1D8"/>
+          <text x="632" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="#1E1E1E">Slack digest</text>
+          <text x="632" y="100" text-anchor="middle" font-size="12" fill="#5A5A5A">Every morning, one channel</text>
+        </svg>
+
+        <div class="two">
+          <div class="card">
+            <h3>1. Collect</h3>
+            <p>Pull new messages from the support inbox and transactional senders, and read open ClickUp hand-offs. Duplicates and self-sent test mail are removed first.</p>
+          </div>
+          <div class="card">
+            <h3>2. Rank</h3>
+            <p>Sort each item into one of three tiers. P1 is needs action now, P2 is needs a reply soon, and P3 is for information only. New accounts are shown in their own section.</p>
+          </div>
+          <div class="card">
+            <h3>3. Deliver</h3>
+            <p>Post a single message in a fixed order, so the team learns the layout and reads it the same way every day.</p>
+          </div>
+          <div class="card">
+            <h3>4. Check</h3>
+            <p>A test window ran the digest against a rolling 25-day history before it went live, so the ranking could be checked against real examples.</p>
+          </div>
+        </div>
+
+        <div class="todo"><p><strong>To confirm before publishing:</strong> the exact tools used for the classifier and the scheduling method, and the specific rules for each tier. This was written from the digest output alone.</p></div>
+
+        <h2>Key product decisions</h2>
+        <h3>Ranking by action needed, not by sender</h3>
+        <p>I grouped items by what the reader must do next, not by which inbox they came from. A payment failure from a billing sender is more urgent than a newsletter from a known contact, and the layout shows that at a glance.</p>
+        <h3>A fixed format with three tiers</h3>
+        <p>Three tiers are enough to separate "act now" from "reply today" from "good to know". More tiers would have made the brief harder to scan, and it would have been unclear which items deserved attention first.</p>
+        <h3>Keeping the human in charge</h3>
+        <p>The digest only ranks and summarises. It never sends a reply or changes a ClickUp status, so the team stays in control of every customer conversation.</p>
+        <h3>Testing on real history before going live</h3>
+        <p>Running the digest against 25 days of past mail let me see where a message landed and correct the rules before anyone relied on it.</p>
+
+        <h2>Impact</h2>
+        <div class="metrics">
+          <div class="metric"><strong>[X] min</strong><span>Morning triage time, before vs. after</span></div>
+          <div class="metric"><strong>[X]%</strong><span>P1 items replied to within [X] hours</span></div>
+          <div class="metric"><strong>[X]</strong><span>Manual hand-offs removed per week</span></div>
+        </div>
+        <div class="todo"><p><strong>Add real numbers:</strong> these placeholders need measured values. Estimates should be labelled as estimates. Share only figures that are approved for public use.</p></div>
+
+        <h2>What I would do next</h2>
+        <ul>
+          <li>Add feedback buttons in Slack (useful / wrong tier) to measure ranking accuracy over time.</li>
+          <li>Learn from the feedback so repeat senders and recurring issues rank correctly without manual rules.</li>
+          <li>Add a weekly summary of volume by tier to spot where the support load is growing.</li>
+        </ul>
+
+        <h2>What I learned</h2>
+        <p>Most of the value came from the format, not the technology. The ranking rules mattered, but a fixed layout that the team reads the same way every morning mattered more. Testing against real history found more problems than any design review would have.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2025 Nandini Priya Rabelli. All rights reserved.</span>
+      <nav class="social" aria-label="Social">
+        <a href="mailto:nandinipriya.r@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nandinipriyarabelli/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@luminofun" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://praana.medium.com/" target="_blank" rel="noopener">Medium</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/menu.js" defer></script>
+</body>
+</html>

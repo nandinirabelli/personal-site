@@ -367,3 +367,60 @@ p { margin: 0 0 1em; }
   margin-bottom: 0.35rem;
 }
 .todo p:last-child { margin-bottom: 0; }
+
+/* ----- Portfolio project pages (AI / automation case studies) ----- */
+.story--wide { max-width: 860px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.two .card h3 { margin-top: 0; }
+.fine { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
+.flow { width: 100%; height: auto; display: block; margin: 0.8rem 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 0.8rem 0;
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+th, td { text-align: left; padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); background: var(--cream); }
+
+.tc {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  margin: 0.7rem 0;
+  white-space: pre-wrap;
+}
+
+.slack {
+  background: #1a1d21;
+  color: #d1d2d3;
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  box-shadow: var(--shadow);
+}
+.slack .head { display: flex; gap: 0.65rem; align-items: center; margin-bottom: 0.75rem; }
+.slack .avatar { width: 36px; height: 36px; border-radius: 8px; background: #4a154b; color: #fff; display: grid; place-items: center; font-weight: 700; }
+.slack .name { color: #fff; font-weight: 700; }
+.slack .time { color: #9ea2a7; font-size: 12px; }
+.slack h4 { margin: 0.9rem 0 0.25rem; color: #fff; font-size: 15px; }
+.slack .row { padding: 0.4rem 0.65rem; border-left: 3px solid #555; margin: 0.25rem 0; background: #222529; border-radius: 4px; }
+.slack .row.p1 { border-color: #E5484D; }
+.slack .row.p2 { border-color: #E08A2E; }
+.slack .row.p3 { border-color: #7b8494; }
+.slack .sub { color: #9ea2a7; font-size: 13px; }
+.tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 999px; margin-right: 6px; vertical-align: 1px; }
+.tag.p1 { background: var(--coral-tint); color: var(--coral-strong); }
+.tag.p2 { background: #FEF0E0; color: #B54708; }
+.tag.p3 { background: #EEF1F5; color: #475467; }
+
+@media (max-width: 640px) { .two { grid-template-columns: 1fr; } }
